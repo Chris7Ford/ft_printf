@@ -6,7 +6,7 @@
 /*   By: chford <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/11 10:05:11 by chford            #+#    #+#             */
-/*   Updated: 2019/05/16 12:37:36 by chford           ###   ########.fr       */
+/*   Updated: 2019/06/11 10:25:05 by chford           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	check_negative_floats(char **answer, t_format var)
 {
 	t_unholy_d	unholy_d;
 	t_unholy_l	unholy_l;
+	char		*temp;
 
+	temp = *answer;
 	if (!(var.length & CL))
 	{
 		unholy_d.d = *((double *)var.value);

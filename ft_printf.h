@@ -6,7 +6,7 @@
 /*   By: chford <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 18:10:51 by chford            #+#    #+#             */
-/*   Updated: 2019/06/10 16:31:09 by chford           ###   ########.fr       */
+/*   Updated: 2019/06/11 10:09:49 by chford           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,7 +180,8 @@ int								printp(t_format var, int fd);
 int								handle_variable(char **str,
 								int fd, va_list list);
 int								printpercent(t_format var, int fd);
-void							rearrange_float_prefix(t_format var, char *answer);
+void							rearrange_float_prefix(t_format var,
+								char *answer);
 int								print_float_string(t_format var,
 								char **answer, int fd);
 int								get_used_length(t_format variable,

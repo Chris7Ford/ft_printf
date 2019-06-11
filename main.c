@@ -6,7 +6,7 @@
 /*   By: chford <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 10:20:04 by chford            #+#    #+#             */
-/*   Updated: 2019/06/06 18:47:45 by chford           ###   ########.fr       */
+/*   Updated: 2019/06/11 09:52:42 by chford           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,9 +106,9 @@ int main(void)
 	printf("\n");
 	printf("\n");
 
-	lenp = printf("this %.8f float", 0);
+	lenp = printf("this %.8f float", (float)0);
 	printf("\n");
-	lenm = ft_printf("this %.8f float", 0);
+	lenm = ft_printf("this %.8f float", (float)0);
 	printf("\n");
 	if(lenm != lenp)
 		printf("LEngths don't match. Mine is %d and the real printf is %d\n", lenm, lenp);

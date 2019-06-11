@@ -6,7 +6,7 @@
 /*   By: chford <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 16:53:43 by chford            #+#    #+#             */
-/*   Updated: 2019/06/10 16:29:45 by chford           ###   ########.fr       */
+/*   Updated: 2019/06/11 10:10:07 by chford           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	*ft_prepend_char(char c, char **s1)
 {
 	char	*string;
 	int		i;
-	
+
 	i = 0;
 	string = (char *)malloc(sizeof(char) * (ft_strlen(*s1) + 2));
 	if (!string)

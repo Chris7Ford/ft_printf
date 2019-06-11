@@ -6,7 +6,7 @@
 /*   By: chford <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/29 16:58:14 by chford            #+#    #+#             */
-/*   Updated: 2019/06/10 16:26:05 by chford           ###   ########.fr       */
+/*   Updated: 2019/06/11 09:47:52 by chford           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ int		print_float_string(t_format var, char **answer, int fd)
 				((!(var.flags & ZERO) && write(fd, " ", 1)) ||
 				(var.flags & ZERO && write(fd, "0", 1))))
 			length = 1;
+		free(*answer);
 		return (i + length);
 	}
 	ft_putstr_fd(*answer, fd);
@@ -131,6 +132,7 @@ int		print_floats(t_format var, int fd)
 	answer = add_string_cm(temp, mantissa,
 			ft_strlen(temp), ft_strlen(mantissa));
 	free(temp);
+	free(mantissa);
 	answer = divide_string_cm(length[1] - exponent, &answer, var);
 	answer = handle_float_precision(&answer, var);
 	check_negative_floats(&answer, var);
